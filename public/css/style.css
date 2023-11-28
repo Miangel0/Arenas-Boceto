@@ -138,6 +138,11 @@ footer {
   background-color: #1b1b32;
 }
 
+#boton-pqrs{
+  background-color: #61A34A;
+  border: #61A34A;
+}
+
 /* Boton de whatsapp*/
 
 .btn-wsp{

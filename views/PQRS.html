@@ -10,99 +10,116 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar-toggler">
+            <div class="logo d-flex justify-content-center align-items-center">
               <a class="navbar-brand" href="#">
-                <img src="./imagenes/image.png" alt="Logo" width="65" height="40">
-                USP
+              <img class="imagen-logo" src="/images/logo.jpg" alt="Logo de Asordan" width="100">
               </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="./index.html">Inicio</a>
-                    <a class="nav-link" href="./consultar.html">Consultar</a>
-                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
-                    <a class="nav-link active" aria-current="page" href="./PQRS.html">PQRS</a>
-                </div>
-              </div>
+              <h1>Asordam</h1>
             </div>
-          </nav>
+            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+              <li class="nav-item">
+                <a class="nav-link" href="/index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros.html">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/servicios.html">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/comunicados.html">Comunicados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/PQRS.html" aria-current="page">Escríbenos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header> 
+    <section>
+      <div class="container mt-5 mb-5">
+        <h1 class="mb-4">Formulario de PQRS</h1>
+        <form action="/submitPQRS" method="post">
 
-    <div style="height: 20px;"></div>
+            <!-- Fila 1: Nombre y Apellido -->
+            <div class="row mb-3 mt-5">
+                <div class="col">
+                    <label for="nombre" class="form-label">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label for="apellido" class="form-label">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required>
+                </div>
+            </div>
 
-    <div class="container mt-5">
-        <h1>Formulario de PQRS</h1>
-        <form>
-          <div class="mb-3">
-            <label for="tipoPQRS" class="form-label">Tipo de PQRS:</label>
-            <select class="form-select" id="tipoPQRS" required>
-              <option value="" disabled selected>Seleccione una opción</option>
-              <option value="peticion">Petición</option>
-              <option value="queja">Queja</option>
-              <option value="reclamo">Reclamo</option>
-              <option value="sugerencia">Sugerencia</option>
-            </select>
-          </div>
+            <!-- Fila 2: Email, Número de Teléfono y Tipo de PQRS -->
+            <div class="row mb-3 mt-5">
+                <div class="col">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label for="telefono" class="form-label">Número de Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label for="tipoPQRS" class="form-label">Tipo de PQRS:</label>
+                    <select id="tipoPQRS" name="tipoPQRS" class="form-select" required>
+                        <option value="peticion">Petición</option>
+                        <option value="queja">Queja</option>
+                        <option value="reclamo">Reclamo</option>
+                        <option value="sugerencia">Sugerencia</option>
+                        <option value="felicitacion">Felicitación</option>
+                    </select>
+                </div>
+            </div>
 
-          <div class="mb-3">
-            <label for="numero" class="form-label">Número de contacto:</label>
-            <input type="tel" class="form-control" id="numero" placeholder="Ingrese su número">
-          </div>
+            <!-- Fila 3: Mensaje -->
+            <div class="mb-3 mt-5">
+                <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+            </div>
 
-          <div class="mb-3">
-            <label for="correo" class="form-label">Correo electrónico:</label>
-            <input type="email" class="form-control" id="correo" placeholder="Ingrese su correo electrónico" required>
-          </div>
-      
-          <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje:</label>
-            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-          </div>
-      
-          <button type="submit" class="btn btn-primary">Enviar</button>
+            <div class="d-flex justify-content-center mt-5">
+              <button type="submit" class="btn btn-primary" id="boton-pqrs">Enviar PQRS</button>
+            </div>
         </form>
       </div>
-      
-    <div style="height: 20px;"></div>
-
-    <footer >
-        <div style="height: 30px;"></div>
-        <div class="container py-6">
+    </section>
+    <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+      <div style="height: 30px;"></div>
+        <div class="container py-6 mt-15">
             <div class="row">
-                <div class="col-md-3">
-                  <h5 class="text-light">Ubicación</h5>
+                <div class="col-md-6">
+                  <h1 class="text-footer">Contacto</h1>
                   <ul class="list-unstyled text-light">
-                    <li>Horario de atención</li>
-                    <li>8:00 am - 5:00pm</li>
-                    <li>Dirección: Calle 57A norte, Los Alamos</li>
-                    <li>Piso 2 de la casa #54</li>
+                    <li>Santiago de Cali</li>
+                    <li>Calle 28 # 5 - 30 B/ Porvenir</li>
+                    <li>+57 315 438 6894</li>
+                    <li>+57 310 375 7895</li>
                   </ul>
                 </div>
-                <div class="col-md-3">
-                  <h5 class="text-light">Linea de atención</h5>
+                <div class="col-md-6">
+                  <h1 class="text-footer">Siguenos</h1>
+                  <h3>Nuestras Redes</h3>
                   <ul class="list-unstyled text-light">
-                    <li>Teléfono: +57 3013194972</li>
-                    <li>Correo electrónico: miguel.martinez00@usc.edu.co</li>
-                  </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="text-light">Información</h5>
-                    <ul class="list-unstyled">
-                      <li><a href="#">Términos y condiciones</a></li>
-                    </ul>
-                  </div>
-                <div class="col-md-3">
-                    <img src="./imagenes/usc.png" class="img-fluid">
-                </div>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
               </div>
-        </div>
+            </div>
         <div class="container">
           <p id="copyright" class="text-light ">Copyright &copy; 2023 USP</p>
         </div>
-      </footer>
-
+      </div>
+    </footer>
 </body>
 </html>
