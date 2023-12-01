@@ -7,90 +7,114 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="./CSS/bootstrap.min.css">  
 </head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="./imagenes/image.png" alt="Logo" width="65" height="40">
-                USP
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link" href="/index.html">Inicio</a>
-                    <a class="nav-link" href="/consultar.html">Consultar</a>
-                    <a class="nav-link active" aria-current="page" href="/nosotros.html">Nosotros</a>
-                    <a class="nav-link" href="/PQRS.html">PQRS</a>
-                </div>
-              </div>
-            </div>
-          </nav>
-    </header> 
-
-    <div style="height: 20px;"></div>
-
-    <div class="container mt-5" style="margin-bottom: 4%;">
-        <h1 style="text-align: center; margin-bottom: 50px;">USP</h1>
-      
-        <div class="row">
-          <div class="col-md-4">
-            <h2 style="text-align: center;">Visión</h2>
-            <p>Ser reconocidos como líderes en la transformación digital de la gestión de servicios públicos, brindando soluciones innovadoras y confiables. Aspiramos a construir un futuro donde la visualización, pago y reporte de novedades en servicios como agua, electricidad y acueducto sean procesos intuitivos y eficientes para todos nuestros clientes, contribuyendo así al bienestar de las comunidades a las que servimos.</p>
+<body onload="mostrarTexto('Misión')">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-toggler">
+          <div class="logo d-flex justify-content-center align-items-center">
+            <a class="navbar-brand" href="#">
+            <img class="imagen-logo" src="/images/logo.jpg" alt="Logo de Asordan" width="100">
+            </a>
+            <h1>Asordam</h1>
           </div>
-      
-          <div class="col-md-4">
-            <h2 style="text-align: center;">Misión</h2>
-            <p>Facilitar los procesos de servicios públicos a nuestros clientes al proporcionar utilidades especializadas de visualización, pagos y reporte de novedades en el ámbito de los servicios públicos, incluyendo agua, electricidad y acueducto. Nos comprometemos a ofrecer soluciones eficientes y tecnológicamente avanzadas que simplifiquen la gestión de servicios esenciales, mejorando así la experiencia de nuestros usuarios.</p>
-          </div>
-      
-          <div class="col-md-4">
-            <h2 style="text-align: center;">Historia</h2>
-            <p>Desde nuestra fundación en el año 2023, hemos estado comprometidos en proporcionar soluciones efectivas para nuestros clientes. Continuamos creciendo y evolucionando, adaptándonos a las cambiantes necesidades del mercado y manteniendo nuestros estándares de excelencia.</p>
-          </div>
+          <ul class="navbar-nav d-flex justify-content-center align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nosotros.html">¿Quienes somos?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/comunicados.html">Comunicados</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/PQRS.html">Escríbenos</a>
+            </li>
+          </ul>
         </div>
       </div>
-
-    <div style="height: 20px;"></div>
-
-    <footer >
-        <div style="height: 30px;"></div>
-        <div class="container py-6">
-            <div class="row">
-                <div class="col-md-3">
-                  <h5 class="text-light">Ubicación</h5>
-                  <ul class="list-unstyled text-light">
-                    <li>Horario de atención</li>
-                    <li>8:00 am - 5:00pm</li>
-                    <li>Dirección: Calle 57A norte, Los Alamos</li>
-                    <li>Piso 2 de la casa #54</li>
-                  </ul>
-                </div>
-                <div class="col-md-3">
-                  <h5 class="text-light">Linea de atención</h5>
-                  <ul class="list-unstyled text-light">
-                    <li>Teléfono: +57 3013194972</li>
-                    <li>Correo electrónico: miguel.martinez00@usc.edu.co</li>
-                  </ul>
-                </div>
-                <div class="col-md-3">
-                    <h5 class="text-light">Información</h5>
-                    <ul class="list-unstyled">
-                      <li><a href="#">Términos y condiciones</a></li>
-                    </ul>
-                  </div>
-                <div class="col-md-3">
-                    <img src="./imagenes/usc.png" class="img-fluid">
-                </div>
+    </nav>
+  </header> 
+  <section class="info-empresa align-items-stretch">
+    <div class="container mt-5 mb-5 bg-success p-2 " style="--bs-bg-opacity:.2;" id="container-info">
+      <div class="row">
+        <div class="col-md-4">
+          <button class="btn btn-primary" onclick="mostrarTexto('Misión')">Misión</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-success" onclick="mostrarTexto('Visión')">Visión</button>
+        </div>
+        <div class="col-md-4">
+          <button class="btn btn-info" onclick="mostrarTexto('Historia')">Historia</button>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <div id="textoMostrado" class="alert alert-secondary" role="alert">
+            Presiona un botón para ver el texto.
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img id="imagenMostrada" src="url_de_la_imagen_mision.jpg" alt="Imagen" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      function mostrarTexto(tipo) {
+        var texto = "";
+        var imagenSrc = "";
+  
+        if (tipo === 'Misión') {
+          texto = "Nuestra organización ''ASORDAM'' busca promover en cada hogar, local, esquina. o lugar la actividad de reciclar en la ciudad de Cali, tenemos como objetivo cumplir con un conjunto de procesos operativos, empezando por la captación de los residuos reciclables en la fuente, luego el transporte hasta la estación de clasificación y aprovechamiento ''ECA'' y finalmente el procesamiento de todo el material aprovechable para sercomercializado, medio de este mecanismo buscamos mejorar la economía pero enfocada a lo sustentable, la generación de empleo, la mitigación de impactos ambientales y el mejoramiento de la calidad de vida en general.";
+          imagenSrc = "url_de_la_imagen_mision.jpg";
+        } else if (tipo === 'Visión') {
+          texto = "Tenemos como propósito transformar y recuperar todo el material aprovechado para lograr un gran cambio positivo en lo económico, lo espiritual y sobre todo en lo ambiental aquí en la madre tierra, luchando fuertemente contra la ignorancia humana y la desigualdad social, teniendo como arma La Educación Socio- Ambiental.";
+          imagenSrc = "url_de_la_imagen_vision.jpg";
+        } else if (tipo === 'Historia') {
+          texto = "ASORDAM, la Asociación Ruta Selectiva Ambiental de Recicladores, fue fundada en 2021 en Cali, centrándose en mejorar la calidad de vida de los recicladores de la zona de Navarro. La asociación no solo se enfoca en adquirir materiales reciclables, sino también en llevar a cabo actividades que contribuyan al cuidado del medio ambiente. Abierta a recicladores callejeros, requiere un período de estudio de dos años para convertirse en socio, durante el cual los interesados deben demostrar compromiso y disposición para capacitarse.La misión de ASORDAM va más allá de la recolección de residuos; busca equilibrar la pasión por el reciclaje con la generación de ingresos para sus miembros, asegurando un impacto positivo en la sociedad. Ofrece servicios que incluyen reciclaje en la fuente, implementación del Plan de Gestión Integral de Residuos Sólidos (PGIRS) y actividades de socialización en diversos entornos. La organización se compromete a contribuir al medio ambiente en diversas áreas, desde aspectos agrícolas hasta iniciativas que promuevan la sostenibilidad ambiental.";
+          imagenSrc = "url_de_la_imagen_vision.jpg";
+        }
+        document.getElementById('textoMostrado').innerHTML = texto;
+        document.getElementById('imagenMostrada').src = imagenSrc;
+      }
+    </script>
+  </section>
+  
+  <footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+    <div style="height: 30px;"></div>
+      <div class="container py-6 mt-15">
+          <div class="row">
+              <div class="col-md-6">
+                <h1 class="text-footer">Contacto</h1>
+                <ul class="list-unstyled text-light">
+                  <li>Santiago de Cali</li>
+                  <li>Calle 28 # 5 - 30 B/ Porvenir</li>
+                  <li>+57 315 438 6894</li>
+                  <li>+57 310 375 7895</li>
+                </ul>
               </div>
-        </div>
-        <div class="container">
-          <p id="copyright" class="text-light ">Copyright &copy; 2023 USP</p>
-        </div>
-      </footer>
-
+              <div class="col-md-6">
+                <h1 class="text-footer">Siguenos</h1>
+                <h3>Nuestras Redes</h3>
+                <ul class="list-unstyled text-light">
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+              </ul>
+            </div>
+          </div>
+      <div class="container">
+        <p id="copyright" class="text-light ">Copyright &copy; 2023 USP</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

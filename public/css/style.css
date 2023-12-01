@@ -1,4 +1,5 @@
 /* Navbar */
+
 body{
   font-family:Arial, Helvetica, sans-serif;
 }
@@ -12,7 +13,7 @@ body{
 }
 .nav-item a{
   color:aliceblue;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .logo{
@@ -33,9 +34,13 @@ body{
 }
 /* Adaptable (Responsivo) */
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:1000px) {
   .navbar-brand{
     display: none;
+  }
+  #container-info{
+    min-width: none;
+    min-height: none;
   }
 }
 
@@ -58,6 +63,22 @@ h1{
   background-color: #f5f6f7;
   min-height: 450px;
   text-align: center;
+}
+
+#container-cards{
+  text-align: center;
+}
+
+.container-servicios{
+  min-height: 450px;
+}
+
+.info-empresa{
+  text-align: center;
+}
+
+#container-info{
+  min-height: 432px  ;
 }
 
 .hero-principal{
@@ -171,5 +192,31 @@ footer {
       width:63px;
       height:63px;
       line-height: 66px;
+  }
 }
+.card {
+  transition: transform 0.5s;
+  min-height: 300px;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.card-back {
+  display: none;
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+  display: none;
+}
+
+.card:hover .card-back {
+  display: block;
+}
+
+.container-servicios{
+  text-align: center;
+  align-items: center;
 }
